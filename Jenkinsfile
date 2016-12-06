@@ -1,5 +1,6 @@
-node('master'){
+node{
    def mvnHome
+   ws("workspace/${env.JOB_NAME}/${env.BRANCH_NAME}" {
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
       https://github.com/chandrayarramreddy/PilotProject.git
@@ -16,6 +17,6 @@ node('master'){
          bat(/"${mvnHome}\bin\mvn" clean package/)
       }
    }
-   
+   }
   
 }
