@@ -1,6 +1,6 @@
 node{
    def mvnHome
-   ws("workspace/${env.JOB_NAME}/${env.BRANCH_NAME}" {
+   ws("workspace/${env.JOB_NAME}/${env.BRANCH_NAME}".replace('%2F', '_')) {
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
       https://github.com/chandrayarramreddy/PilotProject.git
@@ -17,6 +17,5 @@ node{
          bat(/"${mvnHome}\bin\mvn" clean package/)
       }
    }
-   }
-  
+   } 
 }
