@@ -1,3 +1,6 @@
+#!groovy
+
+
 node{
    def mvnHome
   
