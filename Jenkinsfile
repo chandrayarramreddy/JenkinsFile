@@ -38,8 +38,8 @@ node {
     // Mark the code build 'stage'....
     stage 'Build'
 
-    def mvnHome = tool 'maven-3.3.9'
-
+  //  def mvnHome = tool 'maven-3.3.9'
+    def  mvnHome = tool 'M2_HOME'
     sh "${mvnHome}/bin/mvn clean verify -B"
     
     junit testResults: '**/surefire-reports/*.xml'
