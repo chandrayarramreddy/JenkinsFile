@@ -40,7 +40,9 @@ node {
 
   //  def mvnHome = tool 'maven-3.3.9'
     def  mvnHome = tool 'M2_HOME'
-    sh "${mvnHome}/bin/mvn clean package"
+ //   sh "${mvnHome}/bin/mvn clean package"
+ 
+   bat(/"${mvnHome}\bin\mvn" clean package/)
     
   //  junit testResults: '**/surefire-reports/*.xml'
   }
