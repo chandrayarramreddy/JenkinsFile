@@ -10,7 +10,7 @@
 	<!-- Drools -->
 		<drools.version>6.1.0.Final</drools.version>
 		<!-- Test -->
-		<junit.version>4.11</junit.version>
+		<junit.version>4.13.1</junit.version>
 	</properties>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
